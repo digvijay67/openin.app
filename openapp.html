@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+    <link rel="stylesheet" href="openapp.css">
+    <link rel="website icon" type="png" href="My project-1 (244).jpg" height="200px" width="200pxgit ">
+<title>Digvijaysing Rajput</title>
+</head>
+
+<body> 
+    <section class="login-container">
+        <div class="login-bg">
+            <h1 class="royale">Board.</h1> 
+            
+                 
+          <h2 class="name-n" ><img src="dashboard_icon.png" width="18px" height="18px" style="flex-shrink: 0;justify-items: center;margin-right: 2%;">Dashboard</h2>
+          
+          <h3 class="name-a"><img src="transaction_icon.png" width="18px" height="18px" style="flex-shrink: 0;justify-items: center;margin-right: 2%;">Transaction</h3>
+          <h3 class="name-m"><img src="schedule_icon.png" width="18px" height="18px" style="flex-shrink: 0;justify-items: center;margin-right: 2%;">Schedules</h3>
+          <h3 class="name-ma"><img src="user_icon.png" width="18px" height="18px" style="flex-shrink: 0;justify-items: center;margin-right: 2%;">Users</h3>
+          <h3 class="name-an"><img src="setting_icon.png" width="18px" height="18px" style="flex-shrink: 0;justify-items: center;margin-right: 2%;">Settings</h3>
+          <h3 class="last-name">Help</h3>
+          <h3 class="last-way">Contact Us</h3>
+          <h3 class="last-way" id="logout">Log out</h3>
+          </div>
+          
+          <nav>
+            <ul>
+              <li><a href="#">Dashboard</a></li>
+              <input class="search" type="text"placeholder="Search..."/>
+              <li><img class="image-x" src="pngwing.com.png"width="24px" height="24px"></li>
+              <li><img class="image-y" src="profile image.jpg" width="35px" height="35px"></li>
+              
+            </ul>
+          
+          
+        
+
+          
+          
+        
+          <div class="container">
+        
+            <div class="column-n">
+              <img src="Vector.png">
+              <h2>Total Revenues</h2>
+              <p style="font-size: 130%; font-weight: 200;">$2,129,430</p>
+            </div>
+            <div class="column-p">
+              <img src="Trans....png">
+              <h2>Total Transactions</h2>
+              <p style="font-size: 130%; font-weight: 200;">1,520</p>
+            </div>
+            <div class="column-o">
+              <img src="Vector (1).png">
+              <h2>Total Like</h2>
+              <p style="font-size: 130%; font-weight: 200;">9,721</p>
+            </div>
+            <div class="column-c">
+              <img src="User.png">
+                <h2>Total User</h2>
+                <p style="font-size: 130%; font-weight: 200;">892</p>
+            </div>
+          </div>
+          
+          
+
+            
+        </div>
+        <div id="curve_chart" ></div>
+        
+        
+        <script src="openapp.js"></script>
+       <div class="rana-r">
+          <div class="pie">
+            <h1 class="pie-f">Top Product</h1>
+           
+        <div id="piechart" >
+          
+        <script src="graph.js">
+          
+        </script>
+        </div>
+          </div>
+        
+        <div class="rana">
+          
+          <h1 class="wrong-w">Today Schedules</h1>
+          
+        <h1 class="wrong">Meeting with suppliers form Kuta Bali</h1>
+        <p class="wrong-n">14.00-15-00</p>
+        <p class="wrong-n">at Sunset Road,Kuta,Bali</p>
+         
+
+        <h1 class="wrong">Check operation at Giga Factory</h1>
+        <p class="wrong-n">18.00-20.00</p>
+        <p class="wrong-n">at Central Jakarta</p>
+         
+            
+          </div>
+        </div>
+
+        </div>
+
+</body>
+<script type="module">
+  document.getElementById("logout").addEventListener("click", function() {
+		  signOut(auth).then(() => {
+			  // Sign-out successful.
+			  console.log('Sign-out successful.');
+			  alert('Sign-out successful.');
+			  document.getElementById('logout').style.display = 'none';
+			}).catch((error) => {
+			  // An error happened.
+			  console.log('An error happened.');
+			});		  		  
+	  });
+</script>

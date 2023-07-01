@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Google Login</title>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+  <h1>Google Login</h1>
+  <div id="g-id-btn"></div>
+
+  <script>
+    google.accounts.id.initialize({
+      client_id: 'YOUR_CLIENT_ID',
+      callback: handleCredentialResponse,
+    });
+
+    function handleCredentialResponse(response) {
+      const credential = response.credential;
+      // Send verification and authentication
+      fetch('/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ credential }),
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          // successful login
+        } else {
+          //login failure
+        }
+      })
+      .catch(error => {
+        // Handle error
+      });
+    }
+
+    google.accounts.id.renderButton(
+      document.getElementById('g-id-btn'),
+      { theme: 'outline', size: 'large' }
+    );
+    const express = require('express');
+const app = express();
+
+app.use(express.json());
+
+app.get('/', (req, res) => {
+  // Serve the login page
+  res.sendFile(__dirname + '/index.html');
+});
+
+app.post('/login', (req, res) => {
+  const { credential } = req.body;
+
+});
+  const successResponse = {
+    success: true,
+    message: 'Login successful',
+    
+  res.json(successResponse);
+});
+
+// Start the server
+app.listen(3000, () => {
+  console.log('server-5000');
+});
+
+  </script>
+
+</body>
+</html>
